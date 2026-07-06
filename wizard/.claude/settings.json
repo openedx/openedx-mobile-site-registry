@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew install lftp)",
+      "Bash(npm run build)",
+      "Bash(lftp -u p7,auxd00xk 185.174.220.11 -e \"set ftp:ssl-allow no; mkdir -p /openedx-mobile-wizard; mirror -R /Users/ivanstepanok/Developer/RaccoonGang/OPENEDX/openedx-mobile-wizard/dist/ /openedx-mobile-wizard/; quit\")",
+      "Bash(lftp -u p7,auxd00xk 185.174.220.11 -e \"set ftp:ssl-allow no; ls /openedx-mobile-wizard/; ls /openedx-mobile-wizard/assets/; quit\")",
+      "Bash(lftp -u p7,auxd00xk 185.174.220.11 -e \"set ftp:ssl-allow no; ls /; quit\")",
+      "Bash(lftp -u p7,auxd00xk 185.174.220.11 -e \"set ftp:ssl-allow no; ls /www/; quit\")",
+      "Bash(lftp -u p7,auxd00xk 185.174.220.11 -e \"set ftp:ssl-allow no; mkdir -p /www/stepanok.com/openedx-mobile-wizard; mirror -R /Users/ivanstepanok/Developer/RaccoonGang/OPENEDX/openedx-mobile-wizard/dist/ /www/stepanok.com/openedx-mobile-wizard/; rm -r /openedx-mobile-wizard; quit\")"
+    ]
+  }
+}

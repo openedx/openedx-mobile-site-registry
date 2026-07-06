@@ -1,0 +1,21 @@
+services:
+  api:
+    container_name: openedx-lms-manager
+    restart: unless-stopped
+    ports: !reset []
+    # Production secrets/config (SECRET_KEY, SMTP_*, WEBHOOK_URL, DATABASE_URL, …).
+    # Kept out of git; create /opt/openedx-lms-manager/.env on the server.
+    env_file:
+      - .env
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.lms-manager.rule=Host(`openedx-lms.stepanok.com`)"
+      - "traefik.http.routers.lms-manager.entrypoints=websecure"
+      - "traefik.http.routers.lms-manager.tls.certresolver=letsencrypt"
+      - "traefik.http.services.lms-manager.loadbalancer.server.port=8000"
+
+networks:
+  web:
+    external: true
