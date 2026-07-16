@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+.DS_Store
+**/.DS_Store
+data/
+.env
+.idea
+wizard/node_modules/
+wizard/dist/
+app/static/landing/openedx-universal.apk
+.venv/
+provider_config.json
+site/
+
+# Local tooling / internal notes (not for upstream)
+.claude/
+REVIEW-DEBT.md
+BLOCKED.md
+docker-compose.prod.yml

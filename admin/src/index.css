@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+
+/* Open edX (Paragon) light theme — tokens sampled from Studio:
+   canvas #F8F7F6, cards #fff, brand navy #0A3055, link #006DAA, text #454545. */
+@theme {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --font-mono: 'SFMono-Regular', ui-monospace, 'JetBrains Mono', monospace;
+
+  /* Brand navy (Open edX primary) */
+  --color-brand-50: #eaeef3;
+  --color-brand-100: #cdd8e3;
+  --color-brand-300: #5c7893;
+  --color-brand-500: #0a3055;
+  --color-brand-600: #082741;
+  --color-brand-700: #061c30;
+
+  /* Info blue used for links */
+  --color-link: #006daa;
+  --color-link-hover: #05537f;
+
+  /* Neutrals / surfaces */
+  --color-canvas: #f8f7f6;
+  --color-canvas-2: #f2f0ed;
+  --color-card: #ffffff;
+  --color-line: #e2ded7;
+  --color-line-strong: #c9c3b9;
+
+  /* Text */
+  --color-ink: #171717;
+  --color-ink-soft: #454545;
+  --color-muted: #6b6b6b;
+  --color-faint: #8f8f8f;
+
+  /* Status (Paragon-ish on light) */
+  --color-success: #0d7d4d;
+  --color-success-bg: #e7f4ed;
+  --color-warning: #b26a00;
+  --color-warning-bg: #fbf1e0;
+  --color-danger: #c0353f;
+  --color-danger-bg: #fbeaeb;
+  --color-info-bg: #e8f1fa;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    background: var(--color-canvas);
+    color: var(--color-ink-soft);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #root {
+    min-height: 100dvh;
+  }
+
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-family: var(--font-mono);
+  }
+}
+
+/* Slim scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.18) transparent;
+}
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28);
+}
