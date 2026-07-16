@@ -1,0 +1,31 @@
+# This file records information about this repo. Its use is described in OEP-55:
+# https://open-edx-proposals.readthedocs.io/en/latest/processes/oep-0055-proc-project-maintainers.html
+
+apiVersion: backstage.io/v1alpha1
+# (Required) Acceptable Values: Component, Resource, System
+# Use `Component` unless you know how backstage works and what the other kinds mean.
+kind: Component
+metadata:
+  # (Required) Must be the name of the repo, without the owning organization.
+  name: 'openedx-mobile-site-registry'
+  description: "Experimental site registry backend for the proposed Universal Open edX Mobile App."
+  links:
+    - url: "https://github.com/openedx/openedx-mobile-site-registry"
+      title: "Source Code"
+      icon: "Code"
+  annotations:
+    # (Optional) Comma-separated list of GitHub usernames interested in changes
+    # to the architecture of this component.
+    openedx.org/arch-interest-groups: ""
+    # (Optional) Indicates whether this repo should be tagged for Open edX
+    # releases and which branch is tagged. `null` means it is not part of
+    # Open edX releases (this repo is experimental).
+    openedx.org/release: null
+spec:
+  # (Required) `user:<github_username>` or `group:<github_team>`.
+  # Don't forget the "user:" or "group:" prefix.
+  owner: user:IvanStepanok
+  # (Required) Acceptable Type Values: service, website, library
+  type: 'service'
+  # (Required) Acceptable Lifecycle Values: experimental, production, deprecated
+  lifecycle: 'experimental'
