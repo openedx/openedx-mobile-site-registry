@@ -7,9 +7,10 @@ learner complaints.
 
 > **Pilot status.** Open edX has approved this pilot. It runs independently and
 > not under the Open edX name. If the pilot goes well, Open edX will decide
-> whether to run it officially. The iOS and Android branches referenced below
-> will move to the official Open edX repositories at that point. Product-review
-> thread: [openedx/platform-roadmap#516](https://github.com/openedx/platform-roadmap/issues/516).
+> whether to run it officially. The iOS and Android apps are already open as
+> pull requests against the official Open edX repositories (linked below).
+> Product-review thread:
+> [openedx/platform-roadmap#516](https://github.com/openedx/platform-roadmap/issues/516).
 
 Live instance: **https://openedx-lms.stepanok.com**
 
@@ -166,11 +167,11 @@ URL.
 
 ## Mobile apps
 
-The apps live in separate repositories (moving to the official Open edX repos
-after the pilot):
+The mobile support is open as pull requests against the official Open edX app
+repositories:
 
-- iOS — `white-label-ios`, branch `feat/universal-login`
-- Android — `white-label-android`, branch `feat/unit_list`
+- iOS — [openedx/openedx-app-ios#664](https://github.com/openedx/openedx-app-ios/pull/664) (branch `feat/lms-directory`)
+- Android — [openedx/openedx-app-android#483](https://github.com/openedx/openedx-app-android/pull/483) (branch `feat/lms-directory`)
 
 Both read the registry through `/api/v1/config`, `/api/v1/directory`, and
 `/api/v1/reports`. See [`SPEC.md`](SPEC.md) for the full contract.
